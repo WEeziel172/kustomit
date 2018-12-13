@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from '../src/components/navbar/navbar.js';
+import Li from '../src/components/listItem/listItem.js';
+import Search from '../src/components/search/search.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="header">
+          <div className="logo-div">
+            <img src={require('./logo.png')} width="500px" height="500px" />   
+          </div>
+          <h1 className="logo-heading">Of Superior Design</h1> 
+          <div className="navbar">
+            <Navbar>
+
+              <Li name="Pants" />
+              <Li name="Shirts" />
+              <Li name="Shoes" />
+              <Li name="Accessories" />
+              <Li name="Jackets" />
+            </Navbar>
+          </div>
+        </div>
+        <div className="body">
+        <h1 className="body-heading">Greatness is not born with. It's made.</h1>
+        </div>
+        <div className="footer">
+        </div>
       </div>
     );
   }
